@@ -21,7 +21,6 @@ if (empty($_GET["building"]) || empty($_GET["room"])) {
 $building = htmlspecialchars(strip_tags(trim($_GET["building"])));
 $room = htmlspecialchars(strip_tags(trim($_GET["room"])));
 
-
 ?>
 
 <!DOCTYPE html>
