@@ -30,12 +30,12 @@ $firstname = htmlspecialchars(strip_tags(trim($_GET["firstname"])));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 1</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 
 <body>
-    <h2>Exercice 1</h2>
+    <h2>Exercice 2</h2>
     <p>Nom : <?= $lastname ?><br>
         Prenom : <?= $firstname ?></p>
 </body>
