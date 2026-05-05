@@ -6,21 +6,21 @@ if ($_SERVER['REQUEST_METHOD'] !== "GET") {
 }
 
 // Deuxieme étape de sécurité : verifier que la colonne voulue existe bien
-if (!isset($_GET["lastname"]) || !isset($_GET["firstname"]) || !isset($_GET["age"])) {
+if (!isset($_GET["startDate"]) || !isset($_GET["endDate"])) {
     echo "<p>Un des paramètres est manquant</p>";
     exit();
 }
 
 // Troisième étape de sécurité : verifier que la colonne voulue n'est pas vide
-if (empty($_GET["lastname"]) || empty($_GET["firstname"]) || empty($_GET["age"])) {
+if (empty($_GET["startDate"]) || empty($_GET["endDate"])) {
     echo "<p>Un des paramètres est vide</p>";
     exit();
 }
 
 // Quatrième étape de sécurité : on empêche l'utilisation de balise (par exemple script)
-$lastname = htmlspecialchars(strip_tags(trim($_GET["lastname"])));
-$firstname = htmlspecialchars(strip_tags(trim($_GET["firstname"])));
-$age = htmlspecialchars(strip_tags(trim($_GET["age"])));
+$startDate = htmlspecialchars(strip_tags(trim($_GET["startDate"])));
+$endDate = htmlspecialchars(strip_tags(trim($_GET["endDate"])));
+
 
 ?>
 
@@ -30,17 +30,14 @@ $age = htmlspecialchars(strip_tags(trim($_GET["age"])));
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 2</title>
+    <title>Exercice 3</title>
     <link rel="stylesheet" href="../assets/styles/style.css">
 </head>
 
 <body>
-    <h2>Exercice 2</h2>
-    <p>
-        Nom : <?= $lastname ?><br>
-        Prenom : <?= $firstname ?><br>
-        Âge : <?= $age ?>
-    </p>
+    <h2>Exercice 3</h2>
+    <p>Première date : <?= $startDate ?><br>
+        Deuxième date : <?= $endDate ?></p>
 </body>
 
 </html>
